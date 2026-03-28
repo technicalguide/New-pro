@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-drp-maroon: #5C0A0A;
+  --color-drp-black: #0D0D0D;
+  --color-drp-red: #D32F2F;
+  --color-drp-white: #FFFFFF;
+}
+
+body {
+  background-color: var(--color-drp-black);
+  color: var(--color-drp-white);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Liquid gradient animation */
+@keyframes liquid {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-liquid {
+  background: linear-gradient(-45deg, #0D0D0D, #5C0A0A, #2A0404, #D32F2F);
+  background-size: 400% 400%;
+  animation: liquid 15s ease infinite;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.2);
+  color: transparent;
+}
